@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+
 @Setter
 @Getter
 @Entity
@@ -18,9 +19,10 @@ public class Users {
 
     private String name;
     private String email;
+
     private String birthdate;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "address_id", referencedColumnName = "id")
     private Address address;
 
